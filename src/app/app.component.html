@@ -13,8 +13,8 @@
     <h2>Hi, I'm <span>Ajay Rangam</span></h2>
     <h4>I build responsive and interactive web applications.</h4>
     <div>
-      <button class="btn btn-primary" type="submit">View my work</button>
-      <button class="btn btn-link" type="button">My Resume</button>
+      <!-- <button class="btn btn-primary" type="submit">View my work</button> -->
+      <button class="btn btn-link" type="button" (click)="openDocument()">My Resume</button>
     </div>
     <div>
       <h3>My Skills:</h3>
@@ -25,7 +25,7 @@
     </div>
   </div>
   <div class="image-section">
-    <img src="../assets/img/Ajay.jpg" alt="My Image">
+    <img src="./assets/img/Ajay.jpg" alt="My Image">
   </div>
 </section>
 
@@ -75,7 +75,7 @@
   <h3 class="heading">Projects</h3>
   <div class="project-grid">
     <div class="card" *ngFor="let project of projects">
-      <img src="" alt="dummy img" class="card-poster">
+      <img [src]="project.img" alt="dummy img" class="card-poster">
       <div class="card-content">
         <h4 class="card-title">{{project.title}}</h4>
         <p class="card-desc">{{project.desc}}</p>
@@ -87,25 +87,22 @@
 
 <section class="contact-section">
   <h2 class="heading" style="opacity: 1; transform: none;">Contact Me</h2>
-  <form class="contact-us" (ngSubmit)="onSubmit(contactForm)"
-   #contactForm="ngForm" novalidate>
+  <form class="contact-us" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
 
     <input type="text" name="name" placeholder="Your Name" ngModel required>
-    <input type="email" name="email" placeholder="Your Email" 
-      ngModel required email >
-  
+    <input type="email" name="email" placeholder="Your Email" ngModel required email>
+
     <textarea name="message" placeholder="Your Message" class="text-field" ngModel required></textarea>
 
-    <button class="btn btn-primary" >Send</button>
+    <button class="btn btn-primary">Send</button>
 
 
     <div class="social-links">
-      <a href="www.linkedin.com/in/jagadeesh-putta-8046a3299" target="_blank" rel="noopener">
-        </a>
-      <a href="https://twitter.com/sunny_jaggu" target="_blank" rel="noopener">
-       <img src="../assets/img/twitter.svg" alt=""> </a>
-      <a href="https://instagram.com/sunny_jaggu013" target="_blank" rel="noopener">
-        <i class="fab fa-instagram fa-2x"></i></a>
+      <a href="https://github.com/ajay12344" target="_blank" rel="noopener" class="github">
+        <img src="./assets/img/github.png" alt="github">
+      </a>
+      <a href="https://www.linkedin.com/in/ajay-rangam-52b5b9172/" target="_blank" rel="noopener">
+        <img src="./assets/img/linkedin.png" alt="linkedin"> </a>
     </div>
   </form>
 </section>

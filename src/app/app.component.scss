@@ -259,7 +259,14 @@
     .social-links {
         display: flex;
         justify-content: center;
-        gap: 18px
+        gap: 18px;
+        .github{
+            background-color: white;
+        }
+        img{
+            width: 34px;
+            height: 34px;
+        }
     }
 
 
