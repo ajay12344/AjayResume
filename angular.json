@@ -30,9 +30,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/aos/dist/aos.css"
             ],
-            "scripts": []
+            "scripts": [
+                "node_modules/aos/dist/aos.js"
+
+            ]
           },
           "configurations": {
             "production": {
@@ -93,12 +97,19 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/aos/dist/aos.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+                "node_modules/aos/dist/aos.js"
+
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "6d7179f2-4aa3-45b8-9b9f-0e4edb2f735c"
   }
 }
